@@ -1,0 +1,13 @@
+require 'sinatra/base'
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+
+class Battle < Sinatra::Base
+  get '/' do
+    'Hello Battle!'
+  end
+
+  run! if app_file == $0
+end
